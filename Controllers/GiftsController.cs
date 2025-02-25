@@ -1,12 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using myApi.models;
-using myApi.Services;
+using myApi.Interfaces;
 namespace myApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class GiftsController : ControllerBase
 {
+    private IGiftService GiftService;
+
+    public GiftsController(IGiftService giftService){
+        this.GiftService=giftService;
+    }
 
     [HttpGet]
     public ActionResult<IEnumerable<Gift>> Get()

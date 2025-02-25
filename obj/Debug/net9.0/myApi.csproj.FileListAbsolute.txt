@@ -31,3 +31,6 @@ Z:\B\כהן רבקה\core\myApi\obj\Debug\net9.0\refint\myApi.dll
 Z:\B\כהן רבקה\core\myApi\obj\Debug\net9.0\myApi.pdb
 Z:\B\כהן רבקה\core\myApi\obj\Debug\net9.0\myApi.genruntimeconfig.cache
 Z:\B\כהן רבקה\core\myApi\obj\Debug\net9.0\ref\myApi.dll
+Z:\B\כהן רבקה\core\myApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+Z:\B\כהן רבקה\core\myApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+Z:\B\כהן רבקה\core\myApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
