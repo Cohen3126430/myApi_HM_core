@@ -23,8 +23,9 @@
 // app.Run();
 
 using myApi.Services;
-
-using Microsoft.OpenApi.Models;
+using Middleware.Middlewares;
+using myApi.MiddleWare;
+// using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,24 +34,25 @@ builder.Services.AddControllers();
 builder.Services.AddGiftConst();
 
 // הוספת Swagger
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-});
+// builder.Services.AddSwaggerGen(c =>
+// {
+//     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+// });
 
 var app = builder.Build();
 
 // קביעת המידלוואר לשרת את Swagger כנקודת JSON
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-        c.RoutePrefix = string.Empty; // קבעי את Swagger UI בשורש האפליקציה
-    });
-}
-
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwagger();
+//     app.UseSwaggerUI(c =>
+//     {
+//         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+//         c.RoutePrefix = string.Empty; // קבעי את Swagger UI בשורש האפליקציה
+//     });
+// }
+app.UseMyLog();
+app.UseMyErrorMiddleware();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
