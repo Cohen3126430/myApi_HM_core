@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Mail;
 
-namespace Middleware.Middlewares;
+namespace MyApi.Middlewares;
 public class MyErrorMiddleware
 {
     private RequestDelegate n;
@@ -30,11 +30,12 @@ public class MyErrorMiddleware
             try
             {
                 // קוד לשליחת המייל
-                MailMessage mail = new MailMessage("y05271907@gmail.com", "9745544b@gmail.com", $"תקלה בשרת {e.Message}", "פנה לתמיכה התכנית");
+                //לא באמת עובד...
+                MailMessage mail = new MailMessage("3126430@gmail.com", "3126430@gmail.com", $"תקלה בשרת {e.Message}", "פנה לתמיכה התכנית");
 
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new NetworkCredential("y05271907@gmail.com", "y089741623");
+                    smtp.Credentials = new NetworkCredential("3126430@gmail.com", "");
                     smtp.EnableSsl = true;
 
                     Console.WriteLine("before send mail");

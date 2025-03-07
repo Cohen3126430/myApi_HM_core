@@ -12,13 +12,13 @@ public class MyLogMiddleWare
 
     public async Task Invoke(HttpContext contex)
     {
-        await contex.Response.WriteAsync($"My Log Middleware start\n");
+        // await contex.Response.WriteAsync($"My Log Middleware start\n");
         var sw =new Stopwatch();
         sw.Start();
         await next(contex);
         Console.WriteLine($"{contex.Request.Path}.{contex.Request.Method} took {sw.ElapsedMilliseconds}ms."
                             + $" Succes: {contex.Items["success"]}");
-        await contex.Response.WriteAsync("My Log Middleware end\n");
+        // await contex.Response.WriteAsync("My Log Middleware end\n");
     }
 }
     public static class MyLogMiddleWareHelper
