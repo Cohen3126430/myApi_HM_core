@@ -33,16 +33,16 @@ public class MyErrorMiddleware
                 //לא באמת עובד...
                 MailMessage mail = new MailMessage("3126430@gmail.com", "3126430@gmail.com", $"תקלה בשרת {e.Message}", "פנה לתמיכה התכנית");
 
-                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
-                {
-                    smtp.Credentials = new NetworkCredential("3126430@gmail.com", "");
-                    smtp.EnableSsl = true;
+                // using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                // {
+                //     smtp.Credentials = new NetworkCredential("3126430@gmail.com", "");
+                //     smtp.EnableSsl = true;
 
-                    Console.WriteLine("before send mail");
-                    smtp.Send(mail);
-                    Console.WriteLine("after send mail");
-                    Console.WriteLine("המייל נשלח בהצלחה");
-                }
+                //     Console.WriteLine("before send mail");
+                //     smtp.Send(mail);
+                //     Console.WriteLine("after send mail");
+                //     Console.WriteLine("המייל נשלח בהצלחה");
+                // }
             }
             catch (Exception ex)
             {
