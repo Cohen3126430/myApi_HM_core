@@ -1,37 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\B\\כהן רבקה\\core\\myApi\\myApi.csproj": {}
+    "C:\\Users\\user1\\Desktop\\תכנות\\יד - שנה ב\\core\\MyApi\\MyApi.csproj": {}
   },
   "projects": {
-    "Z:\\B\\כהן רבקה\\core\\myApi\\myApi.csproj": {
+    "C:\\Users\\user1\\Desktop\\תכנות\\יד - שנה ב\\core\\MyApi\\MyApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\B\\כהן רבקה\\core\\myApi\\myApi.csproj",
-        "projectName": "myApi",
-        "projectPath": "Z:\\B\\כהן רבקה\\core\\myApi\\myApi.csproj",
-        "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
-        "outputPath": "Z:\\B\\כהן רבקה\\core\\myApi\\obj\\",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\יד - שנה ב\\core\\MyApi\\MyApi.csproj",
+        "projectName": "MyApi",
+        "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\יד - שנה ב\\core\\MyApi\\MyApi.csproj",
+        "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\יד - שנה ב\\core\\MyApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\huser\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -44,16 +39,35 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -83,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

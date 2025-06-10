@@ -1,53 +1,79 @@
 using Microsoft.AspNetCore.Mvc;
-using myApi.models;
-using myApi.Interfaces;
-namespace myApi.Controllers;
+using MyApi.Models;
+using MyApi.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using MyApi.Services;
+namespace MyApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class UserController: ControllerBase
+public class UserController : ControllerBase
 {
     private IUserService UserService;
 
-    public UserController(IUserService UserService){
+    //to delete user items in delete user
+    private IGiftService GiftService;
+    public UserController(IUserService UserService, IGiftService GiftService){
         this.UserService = UserService;
+        this.GiftService = GiftService;
+
     }
 
+
     [HttpGet]
+    [Authorize(Policy = "Admin")]
+
     public ActionResult<IEnumerable<User>> Get()
     {
-        System.Console.WriteLine("in get of UserController-----------");
         return UserService.Get();
     }
+
     [HttpGet("{id}")]
+    [Authorize(Policy = "User")]
     public ActionResult<User> Get(int id)
     {
-        var User=UserService.Get(id);
-        if(User==null)
-            return NotFound("not found");
-        return User;
+        
+        // if(id!=currentUser.UserId && User.FindFirst("type")?.Value != "Admin")
+        //     return Unauthorized();
+        var user = UserService.Get(id);
+        if (user == null)
+            return NotFound();
+        return user;
     }
+
     [HttpPost]
-    public ActionResult Post (User newUser){
-        System.Console.WriteLine(newUser);
-        var newId=UserService.Insert(newUser);
-        System.Console.WriteLine(newId);
-        if(newId==-1)
+    [Authorize(Policy = "Admin")]
+
+    public ActionResult Post(User newUser)
+    {
+        var userId = UserService.Insert(newUser);
+        if (userId == -1)
             return BadRequest();
-        return CreatedAtAction(nameof(Post),new{id=newId});
+        return CreatedAtAction(nameof(Post), new { Id= userId});
     }
 
     [HttpPut("{id}")]
-    public ActionResult Put(int id,User newUser){
-        if(UserService.Update(id,newUser));
+    [Authorize(Policy = "User")]
+
+    public ActionResult Put(int id, User newUser)
+    {
+        if(UserService.Update(id,newUser))
             return NoContent();
+
         return BadRequest();
     }
 
     [HttpDelete("{id}")]
-    public ActionResult Delete(int id){
+    [Authorize(Policy = "Admin")]
+
+    public ActionResult Delete(int id)
+    {
+        GiftService.DeleteUserItems(id);
+
         if(UserService.Delete(id))
             return Ok();
+            
         return NotFound();
-    }
+    } 
+
 }

@@ -1,36 +1,60 @@
 {
   "Files": [
     {
-      "Id": "Z:\\B\\כהן רבקה\\core\\myApi\\wwwroot\\css\\site.css",
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "Z:\\B\\כהן רבקה\\core\\myApi\\wwwroot\\index.html",
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\users.css",
+      "PackagePath": "staticwebassets\\css\\users.css"
+    },
+    {
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "Z:\\B\\כהן רבקה\\core\\myApi\\wwwroot\\js\\site.js",
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.myApi.props",
-      "PackagePath": "build\\myApi.props"
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\users.js",
+      "PackagePath": "staticwebassets\\js\\users.js"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.myApi.props",
-      "PackagePath": "buildMultiTargeting\\myApi.props"
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.myApi.props",
-      "PackagePath": "buildTransitive\\myApi.props"
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\users.html",
+      "PackagePath": "staticwebassets\\users.html"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.myApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MyApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.myApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MyApi.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.MyApi.props",
+      "PackagePath": "build\\MyApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.MyApi.props",
+      "PackagePath": "buildMultiTargeting\\MyApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.MyApi.props",
+      "PackagePath": "buildTransitive\\MyApi.props"
     }
   ],
   "ElementsToRemove": []
